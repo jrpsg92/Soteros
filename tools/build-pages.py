@@ -11,7 +11,7 @@ Usage : python3 tools/build-pages.py
 from pathlib import Path
 
 RACINE = Path(__file__).resolve().parent.parent
-BASE = "https://jrpsg92.github.io/soteros/"
+BASE = "https://jrpsg92.github.io/Soteros/"
 
 LIENS = [
     ("index.html", "Accueil"),

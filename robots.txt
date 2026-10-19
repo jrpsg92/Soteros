@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jrpsg92.github.io/soteros/sitemap.xml
+Sitemap: https://jrpsg92.github.io/Soteros/sitemap.xml
