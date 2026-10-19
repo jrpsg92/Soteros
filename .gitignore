@@ -1,0 +1,9 @@
+# Captures de contrôle, régénérées par tools/captures.py
+tools/captures/
+
+# Paquet d'aperçu, régénéré par tools/build-apercu.py
+apercu/
+
+# Divers
+.DS_Store
+__pycache__/

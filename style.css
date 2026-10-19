@@ -1,0 +1,618 @@
+/* =====================================================================
+   Soteros — feuille de style unique, partagée par toutes les pages.
+   Direction artistique : blanc et bleu, l'instrument de navigation en
+   bleu sur fond clair. Tous les contrastes ont été calculés avant d'être
+   posés ici, le plus faible du site est à 4,9 pour une norme à 4,5.
+   ===================================================================== */
+
+:root {
+  color-scheme: light;
+
+  /* Blanc et bleu. Attention, le cyan du logo tombe à 1,8 de contraste sur
+     blanc, il ne peut donc jamais porter de texte. Les bleus ci-dessous
+     sont assombris jusqu'à passer la norme, le plus faible est à 4,9. */
+  --fond:        #FAFBFC;   /* le fond de page, un blanc légèrement froid */
+  --fond-creux:  #EDF2F6;   /* les bandes posées sur le fond */
+  --plume:       #0E1A24;   /* texte principal, 17.0 sur le fond */
+  --plume-doux:  #4C5F6C;   /* texte secondaire, 6.4 */
+  --action:      #0B5FD0;   /* le bleu des boutons et des liens, 5.7 */
+  --teal:        #0C7291;   /* le teal des intitulés, 5.3 */
+  --filet:       rgb(14 26 36 / .13);
+  --filet-fort:  rgb(14 26 36 / .26);
+
+  /* L'en-tête est clair, comme sur les sites de Deb et de Raju. Une barre
+     blanche a besoin de ses propres valeurs : le cyan du fond sombre ne
+     tient pas sur du blanc, il y tombe à 1,9 de contraste. */
+  --blanc:        #FFFFFF;
+  --sur-blanc:    #0F1316;   /* 18.7 sur blanc */
+  --sur-blanc-doux: #55666F; /* 6.0 sur blanc */
+  --teal-fonce:   #0B63C4;   /* 5.8 sur blanc */
+  --filet-clair:  #DEE3E6;
+
+  --mesure:      76rem;
+  --marge:       clamp(1.3rem, 5vw, 4rem);
+  --courbe:      cubic-bezier(.2, .7, .2, 1);
+
+  /* Sora pour tout le texte, large et technique, dans la famille de la typo
+     du logo sans en reprendre le côté jeu vidéo qui ne tient pas en
+     paragraphe. Michroma est réservée au seul mot Soteros, pour raccorder
+     avec le logo. */
+  --titre: "Sora", system-ui, -apple-system, sans-serif;
+  --police: "Sora", system-ui, -apple-system, sans-serif;
+  --marque: "Michroma", "Sora", system-ui, sans-serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--fond);
+  color: var(--plume);
+  font-family: var(--police);
+  font-size: clamp(1rem, .96rem + .2vw, 1.12rem);
+  line-height: 1.65;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img, canvas, svg { display: block; max-width: 100%; }
+
+/* --- Échelle typographique ---------------------------------------------
+   Un seul rapport, appliqué partout. Les titres sont en Instrument Serif,
+   serrés, parce que le display porte la personnalité de la page. */
+
+h1, h2, h3 {
+  font-family: var(--titre);
+  font-weight: 600;
+  letter-spacing: -.035em;   /* une sans large demande plus de serrage qu'une serif */
+  line-height: 1.04;
+  margin: 0;
+  text-wrap: balance;
+}
+
+/* Une sans occupe plus de largeur qu'une serif à corps égal. Le titre est
+   donc plus petit qu'il ne l'était, pour tenir sur deux lignes. */
+h1 { font-size: clamp(2.5rem, 1.3rem + 4.4vw, 4.8rem); }
+h2 { font-size: clamp(1.9rem, 1.2rem + 2.7vw, 3.3rem); }
+h3 { font-size: clamp(1.35rem, 1.1rem + 1vw, 1.75rem); line-height: 1.15; }
+
+p { margin: 0; max-width: 62ch; }
+
+a { color: inherit; }
+
+.enveloppe {
+  width: 100%;
+  max-width: var(--mesure);
+  margin-inline: auto;
+  padding-inline: var(--marge);
+}
+
+/* --- Accès clavier ------------------------------------------------------ */
+
+:where(a, button, [tabindex]):focus-visible {
+  outline: 2px solid var(--action);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.saut-contenu {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: var(--action);
+  color: var(--fond);
+  padding: .8rem 1.2rem;
+  z-index: 400;
+  font-weight: 500;
+}
+.saut-contenu:focus { left: var(--marge); top: .6rem; }
+
+/* --- En-tête ------------------------------------------------------------
+   Le fond et le flou vivent sur un calque séparé. Portés directement par
+   .entete, ils feraient de l'en-tête le bloc conteneur du volet de
+   navigation en position fixe, qui se retrouverait écrasé à la hauteur de
+   la barre. C'est une erreur coûteuse et invisible tant que le menu reste
+   fermé, d'où ce ::before. */
+
+/* La barre d'état des téléphones. Vaut zéro partout ailleurs, donc la
+   règle est sans effet sur un navigateur de bureau. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0 0 auto;
+  height: env(safe-area-inset-top, 0px);
+  z-index: 210;
+  background: var(--blanc);
+}
+
+.entete {
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 200;
+  padding-block: 1.15rem;
+  color: var(--sur-blanc);
+  border-bottom: 1px solid var(--filet-clair);
+  transition: border-color .4s var(--courbe);
+}
+
+.entete::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--blanc);
+}
+
+/* Le trait se renforce dès que la page défile, comme sur les deux autres
+   sites, pour détacher la barre du contenu qui passe dessous. */
+.entete[data-pose="true"] { border-bottom-color: #C3CBD0; }
+
+/* Sur fond clair, le cyan du site n'est plus lisible. */
+.entete :focus-visible { outline-color: var(--teal-fonce); }
+
+.entete__rangee {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+/* Le pictogramme du logo, puis le mot en texte. Le verrou complet du logo
+   devient illisible sous cinquante pixels, alors que le pictogramme seul
+   tient jusqu'à trente-deux. */
+.signature {
+  position: relative;
+  z-index: 160;
+  display: inline-flex;
+  align-items: center;
+  gap: .62rem;
+  font-family: var(--marque);
+  font-size: clamp(.78rem, .7rem + .38vw, .98rem);
+  letter-spacing: .09em;
+  text-transform: uppercase;   /* comme le mot du logo */
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.signature img {
+  width: clamp(1.9rem, 1.6rem + 1.2vw, 2.4rem);
+  height: auto;
+}
+
+/* --- Navigation -------------------------------------------------------- */
+
+.bascule {
+  position: relative;
+  z-index: 160;
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  background: none;
+  border: 1px solid var(--filet-clair);
+  border-radius: 100px;
+  color: var(--sur-blanc);
+  font: inherit;
+  font-size: .9rem;
+  padding: .45rem 1rem .45rem .85rem;
+  cursor: pointer;
+  transition: border-color .25s var(--courbe), color .25s var(--courbe);
+}
+.bascule:hover { border-color: var(--teal-fonce); color: var(--teal-fonce); }
+
+.bascule__traits {
+  width: 15px;
+  height: 9px;
+  border-top: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--sur-blanc-doux);
+  transition: color .25s var(--courbe);
+}
+.nav a:hover { color: var(--teal-fonce); }
+.nav a[aria-current="page"] { color: var(--sur-blanc); }
+
+/* Mobile — volet plein écran. */
+@media (max-width: 61.99rem) {
+  .nav {
+    position: fixed;
+    inset: 0;
+    z-index: 150;
+    display: flex;
+    align-items: center;
+    background: var(--blanc);
+    padding: 6rem var(--marge) 3rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .35s var(--courbe), visibility .35s;
+  }
+  .nav[data-ouvert="true"] { opacity: 1; visibility: visible; }
+
+  .nav ul { width: 100%; }
+  .nav li + li { border-top: 1px solid var(--filet-clair); }
+  .nav a {
+    display: block;
+    padding: .75rem 0;
+    font-family: var(--titre);
+    font-size: clamp(1.9rem, 1.2rem + 3.4vw, 2.6rem);
+    line-height: 1.1;
+    letter-spacing: -.015em;
+  }
+}
+
+/* Bureau — navigation en ligne, séparée par un filet vertical. */
+@media (min-width: 62rem) {
+  .bascule { display: none; }
+  .nav {
+    opacity: 1;
+    visibility: visible;
+  }
+  .nav ul {
+    display: flex;
+    align-items: center;
+    gap: clamp(1.1rem, 2.2vw, 2.1rem);
+  }
+  .nav a { font-size: .95rem; }
+  .nav li:last-child a {
+    border: 1px solid var(--filet-clair);
+    border-radius: 100px;
+    padding: .42rem 1.1rem;
+    color: var(--sur-blanc);
+  }
+  .nav li:last-child a:hover {
+    border-color: var(--teal-fonce);
+    color: var(--teal-fonce);
+  }
+}
+
+/* --- Sections ---------------------------------------------------------- */
+
+.section { padding-block: clamp(4.5rem, 11vw, 9rem); }
+.section--creuse { background: var(--fond-creux); }
+
+.chapeau { max-width: 46ch; }
+.chapeau p { margin-top: 1.4rem; color: var(--plume-doux); }
+
+.repere {
+  font-size: .82rem;
+  letter-spacing: .02em;
+  color: var(--teal);
+  margin-bottom: 1rem;
+}
+
+/* --- Hero -------------------------------------------------------------- */
+
+.ouverture {
+  padding-block: clamp(3rem, 7vw, 5.5rem) clamp(4rem, 9vw, 7rem);
+}
+
+.ouverture__grille {
+  display: grid;
+  gap: clamp(2.5rem, 6vw, 4rem);
+  align-items: center;
+}
+
+@media (min-width: 62rem) {
+  .ouverture__grille {
+    grid-template-columns: 1.05fr .95fr;
+  }
+}
+
+/* Mot d'accueil. Typographie seule, sans relief ni interaction. Le logo
+   et l'instrument sont dessinés en traits fins, un mot en bloc extrudé à
+   côté ferait deux marques sur le même écran. */
+
+.bienvenue {
+  margin: 0 0 1.6rem;
+  font-family: var(--titre);
+  font-weight: 600;
+  letter-spacing: -.035em;
+  line-height: 1.02;
+  font-size: clamp(2.8rem, 1.3rem + 5.2vw, 5.4rem);
+  color: var(--plume);
+}
+
+.bienvenue__marque {
+  display: block;
+  margin-top: .9rem;
+  font-family: var(--police);
+  font-weight: 400;
+  font-size: clamp(1rem, .9rem + .5vw, 1.3rem);
+  letter-spacing: 0;
+  line-height: 1.5;
+  color: var(--plume-doux);
+}
+
+.bienvenue__marque .nom-marque {
+  font-family: var(--marque);
+  color: var(--action);   /* 5.7 sur le fond de page */
+}
+
+.ouverture__intro {
+  color: var(--plume-doux);
+  font-size: clamp(1.05rem, 1rem + .35vw, 1.3rem);
+  max-width: 34ch;
+}
+
+/* L'animation d'ouverture. Un seul moment orchestré, au chargement, en
+   CSS pur : si le JavaScript n'arrive jamais, le texte s'affiche quand
+   même puisque l'animation ne dépend d'aucune classe ajoutée. */
+
+.leve { display: block; overflow: hidden; }
+.leve > span {
+  display: block;
+  animation: monte .95s var(--courbe) both;
+}
+.leve--2 > span { animation-delay: .1s; }
+.leve--3 > span { animation-delay: .2s; }
+
+@keyframes monte {
+  from { transform: translateY(105%); }
+  to   { transform: translateY(0); }
+}
+
+.ouverture__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .9rem 1.6rem;
+  align-items: center;
+  margin-top: 2.4rem;
+}
+
+/* --- L'instrument ------------------------------------------------------ */
+
+.instrument {
+  position: relative;
+  aspect-ratio: 1;
+  width: 100%;
+  max-width: 34rem;
+  margin-inline: auto;
+}
+
+/* Sur téléphone l'instrument passe au-dessus du titre. C'est la première
+   chose qu'on doit voir en ouvrant la page, et plus bas il tombait sous la
+   ligne de flottaison. Il rétrécit pour laisser le titre visible aussi. */
+@media (max-width: 61.99rem) {
+  .instrument { order: -1; max-width: 17rem; }
+  .ouverture { padding-block: 1rem clamp(3rem, 8vw, 5rem); }
+  .ouverture__grille { gap: clamp(1.5rem, 5vw, 3rem); }
+}
+
+.instrument canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* L'instrument se manipule au doigt comme à la souris. pan-y et non none :
+   le glissement vertical doit continuer à faire défiler la page, sinon on
+   reste bloqué dessus sur téléphone. */
+.instrument {
+
+
+}
+
+/* Le halo du noyau, en CSS pour épargner du travail au canvas. */
+.instrument::after {
+  content: "";
+  position: absolute;
+  inset: 30% 32% 34%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgb(11 95 208 / .09), transparent 70%);
+  pointer-events: none;
+}
+
+/* --- Boutons et liens -------------------------------------------------- */
+
+.bouton {
+  display: inline-block;
+  background: var(--action);
+  color: var(--fond);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: .98rem;
+  padding: .85rem 1.7rem;
+  border-radius: 100px;
+  transition: transform .3s var(--courbe), background-color .3s var(--courbe);
+}
+.bouton:hover { background: #084FAE; transform: translateY(-2px); }
+
+.lien {
+  text-decoration: none;
+  color: var(--plume);
+  border-bottom: 1px solid var(--filet-fort);
+  padding-bottom: .2rem;
+  transition: border-color .3s var(--courbe), color .3s var(--courbe);
+}
+.lien:hover { color: var(--action); border-bottom-color: var(--action); }
+
+/* --- Les offres, en rangées plutôt qu'en cartes -------------------------
+   Trois cartes identiques ne disent rien de la différence entre les trois
+   métiers. Des rangées larges laissent la place d'écrire ce qui est
+   réellement livré. */
+
+.offres { border-top: 1px solid var(--filet); margin-top: clamp(2.5rem, 6vw, 4rem); }
+
+.offre {
+  display: grid;
+  gap: .8rem 3rem;
+  padding-block: clamp(2rem, 4vw, 2.9rem);
+  border-bottom: 1px solid var(--filet);
+}
+
+@media (min-width: 52rem) {
+  .offre { grid-template-columns: minmax(0, 15rem) minmax(0, 1fr); align-items: start; }
+}
+
+.offre__corps { color: var(--plume-doux); }
+.offre__corps strong { color: var(--plume); font-weight: 500; }
+
+.livre {
+  list-style: none;
+  margin: 1.3rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+.livre li {
+  border: 1px solid var(--filet-fort);
+  border-radius: 100px;
+  padding: .3rem .85rem;
+  font-size: .86rem;
+  color: var(--plume);
+}
+
+/* --- Projets ----------------------------------------------------------- */
+
+.projets { display: grid; gap: clamp(2.5rem, 5vw, 4rem); margin-top: clamp(2.5rem, 6vw, 4rem); }
+
+@media (min-width: 52rem) { .projets { grid-template-columns: 1fr 1fr; } }
+
+.projet {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: clamp(1.6rem, 3vw, 2.2rem);
+  background: var(--fond-creux);
+  border: 1px solid var(--filet);
+  text-decoration: none;
+  transition: border-color .35s var(--courbe), transform .35s var(--courbe);
+}
+.projet:hover { border-color: var(--action); transform: translateY(-3px); }
+
+.projet__meta { color: var(--teal); font-size: .85rem; }
+.projet__corps { color: var(--plume-doux); font-size: .97rem; }
+.projet__voir { color: var(--action); font-size: .92rem; margin-top: auto; }
+
+/* --- Le déroulé, numéroté parce que c'est vraiment une séquence -------- */
+
+.deroule {
+  list-style: none;
+  counter-reset: pas;
+  margin: clamp(2.5rem, 6vw, 4rem) 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0;
+}
+
+.deroule li {
+  counter-increment: pas;
+  display: grid;
+  grid-template-columns: 2.6rem minmax(0, 1fr);
+  gap: 1.2rem;
+  padding-block: 1.5rem;
+  border-top: 1px solid var(--filet);
+  align-items: baseline;
+}
+.deroule li:last-child { border-bottom: 1px solid var(--filet); }
+
+.deroule li::before {
+  content: counter(pas);
+  font-family: var(--titre);
+  font-size: 1.5rem;
+  color: var(--action);
+}
+
+.deroule h3 { font-size: 1.2rem; }
+.deroule p { margin-top: .35rem; color: var(--plume-doux); font-size: .97rem; }
+
+/* --- Blocs de texte long ----------------------------------------------- */
+
+.prose { max-width: 60ch; }
+.prose h2 { margin-top: clamp(2.6rem, 6vw, 4rem); }
+.prose h2:first-child { margin-top: 0; }
+.prose p { margin-top: 1.2rem; color: var(--plume-doux); }
+.prose p.fort { color: var(--plume); font-size: clamp(1.1rem, 1rem + .5vw, 1.35rem); }
+
+/* --- Contact ----------------------------------------------------------- */
+
+.voies { border-top: 1px solid var(--filet); margin-top: clamp(2.5rem, 6vw, 4rem); }
+
+.voie {
+  display: grid;
+  gap: .5rem 3rem;
+  padding-block: 1.7rem;
+  border-bottom: 1px solid var(--filet);
+}
+@media (min-width: 46rem) {
+  .voie { grid-template-columns: minmax(0, 11rem) minmax(0, 1fr); align-items: baseline; }
+}
+.voie__nom { color: var(--teal); font-size: .9rem; }
+.voie__valeur { font-size: clamp(1.1rem, 1rem + .6vw, 1.45rem); font-family: var(--titre); }
+.voie__valeur a { text-decoration: none; border-bottom: 1px solid var(--filet-fort); }
+.voie__valeur a:hover { color: var(--action); border-bottom-color: var(--action); }
+.voie__note { color: var(--plume-doux); font-size: .92rem; }
+
+/* --- Appel à l'action -------------------------------------------------- */
+
+.appel {
+  text-align: center;
+  padding: clamp(3rem, 8vw, 5.5rem) var(--marge);
+  border: 1px solid var(--filet-fort);
+}
+.appel p { margin: 1.3rem auto 2.2rem; color: var(--plume-doux); max-width: 44ch; }
+
+/* --- Pied -------------------------------------------------------------- */
+
+.pied {
+  border-top: 1px solid var(--filet);
+  padding-block: clamp(3rem, 6vw, 4.5rem) 2rem;
+  font-size: .94rem;
+}
+
+.pied__rangee {
+  display: grid;
+  gap: 2.5rem;
+  margin-bottom: 3rem;
+}
+@media (min-width: 52rem) {
+  .pied__rangee { grid-template-columns: 1.4fr 1fr 1fr; }
+}
+
+.pied__nom {
+  display: flex; align-items: center; gap: .6rem;
+  font-family: var(--marque); font-size: .88rem; letter-spacing: .09em;
+  text-transform: uppercase;
+  margin-bottom: .9rem;
+}
+.pied__nom img { width: 2rem; height: auto; }
+.pied p { color: var(--plume-doux); }
+.pied ul { list-style: none; margin: 0; padding: 0; }
+.pied li + li { margin-top: .55rem; }
+.pied a { color: var(--plume-doux); text-decoration: none; transition: color .25s var(--courbe); }
+.pied a:hover { color: var(--action); }
+.pied__intitule { color: var(--plume); margin-bottom: 1rem; }
+
+.pied__mention {
+  border-top: 1px solid var(--filet);
+  padding-top: 1.6rem;
+  color: var(--plume-doux);
+  font-size: .86rem;
+}
+
+/* --- Mouvement réduit --------------------------------------------------
+   Respecté partout. L'instrument se fige sur une pose, il ne disparaît
+   pas, parce qu'il porte l'identité de la page. */
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+  .bouton:hover, .projet:hover { transform: none; }
+}
