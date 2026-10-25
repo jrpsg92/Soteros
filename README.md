@@ -9,6 +9,7 @@ dépendance, aucun constructeur. Publié par GitHub Pages.
 |---|---|
 | `index.html` | Accueil, avec l'instrument en rotation |
 | `expertise.html` | Sites sur mesure, présence Google, suivi |
+| `offres.html` | Les deux formules, prix et questions fréquentes |
 | `projets.html` | Nails by Deb et Raju Sinniah |
 | `agence.html` | Qui est derrière Soteros |
 | `engagement.html` | Éco-conception |
@@ -28,7 +29,7 @@ Le bon geste, c'est de modifier `tools/build-pages.py` puis de lancer :
 python3 tools/build-pages.py
 ```
 
-Ça réécrit les sept pages, le `sitemap.xml` et le `robots.txt`.
+Ça réécrit les huit pages, le `sitemap.xml` et le `robots.txt`.
 
 ## Ajouter une page
 
@@ -80,5 +81,4 @@ son squelette HTML, pour être publiée comme aperçu. Dossier non versionné.
 ## Reste à faire
 
 - Compléter `mentions-legales.html`, obligatoire en France, article 6 LCEN
-- Renseigner les coordonnées dans `contact.html`, repérées par `[entre crochets]`
 - Renseigner les comptes réseaux dans `tools/build-pages.py`, fonction `pied()`

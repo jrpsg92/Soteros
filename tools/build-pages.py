@@ -16,6 +16,7 @@ BASE = "https://jrpsg92.github.io/Soteros/"
 LIENS = [
     ("index.html", "Accueil"),
     ("expertise.html", "Expertise"),
+    ("offres.html", "Offres"),
     ("projets.html", "Projets"),
     ("agence.html", "Agence"),
     ("engagement.html", "Engagement"),
@@ -557,40 +558,12 @@ CONTACT = """
         <h1 class="leve"><span>Écrivez-moi</span></h1>
         <p>Je réponds moi-même, en général dans la journée.</p>
       </div>
-
-      <!-- =================================================================
-           À COMPLÉTER. Les coordonnées ci-dessous sont des emplacements.
-           Donner les vraies valeurs, ne rien inventer, puis relancer
-           python3 tools/build-pages.py
-           ================================================================= -->
-
       <div class="voies">
         <div class="voie">
           <p class="voie__nom">Courriel</p>
           <div>
-            <p class="voie__valeur"><a href="#" data-coordonnee>[votre adresse e-mail]</a></p>
-            <p class="voie__note">La voie la plus sûre pour un devis.</p>
-          </div>
-        </div>
-        <div class="voie">
-          <p class="voie__nom">Téléphone</p>
-          <div>
-            <p class="voie__valeur"><a href="#" data-coordonnee>[votre numéro]</a></p>
-            <p class="voie__note">Du lundi au vendredi, de neuf heures à dix-neuf heures.</p>
-          </div>
-        </div>
-        <div class="voie">
-          <p class="voie__nom">Instagram</p>
-          <div>
-            <p class="voie__valeur"><a href="#" data-coordonnee>[votre compte]</a></p>
-            <p class="voie__note">Pour voir les projets au fil de l'eau.</p>
-          </div>
-        </div>
-        <div class="voie">
-          <p class="voie__nom">LinkedIn</p>
-          <div>
-            <p class="voie__valeur"><a href="#" data-coordonnee>[votre profil]</a></p>
-            <p class="voie__note">Pour les demandes professionnelles.</p>
+            <p class="voie__valeur"><a href="mailto:contact@soteros.fr">contact@soteros.fr</a></p>
+            <p class="voie__note">Pour un devis ou une question.</p>
           </div>
         </div>
         <div class="voie">
@@ -730,7 +703,7 @@ LEGALES = """
            Statut juridique <strong>[À COMPLÉTER]</strong><br>
            Numéro SIRET <strong>[À COMPLÉTER]</strong><br>
            Adresse professionnelle <strong>[À COMPLÉTER]</strong><br>
-           Adresse e-mail <strong>[À COMPLÉTER]</strong><br>
+           Adresse e-mail <a href="mailto:contact@soteros.fr">contact@soteros.fr</a><br>
            Directeur de la publication <strong>[À COMPLÉTER]</strong></p>
 
         <h2>Hébergement</h2>
@@ -759,6 +732,99 @@ LEGALES = """
   </section>
 """
 
+DEVIS = '<p style="margin-top:1.4rem"><a class="bouton" href="mailto:contact@soteros.fr?subject=Demande%20de%20devis">Demander un devis</a></p>'
+
+
+OFFRES = f"""
+  <section class="section">
+    <div class="enveloppe">
+      <div class="chapeau">
+        <p class="repere">Offres</p>
+        <h1 class="leve"><span>Deux formules</span></h1>
+        <p>Un site complet pour commencer. Un entretien si vous voulez que je
+          m'occupe de la suite.</p>
+      </div>
+
+      <div class="offres">
+        <div class="offre">
+          <h3>Création de site</h3>
+          <div class="offre__corps">
+            <p>Un site sur mesure, mis en ligne. <strong>Votre fiche Google, sa
+              page d'avis et le QR code sont offerts.</strong> Le prix
+              dépend du nombre de pages, et vous recevez un devis écrit avant
+              de vous engager.</p>
+            <ul class="livre">
+              <li>Site sur mesure, pensé pour le téléphone</li>
+              <li>Hébergement compris</li>
+              <li>Fiche Google avec avis, offerte</li>
+              <li>QR code vers la page d'avis, offert</li>
+              <li>Les fichiers vous appartiennent</li>
+            </ul>
+            {DEVIS}
+          </div>
+        </div>
+
+        <div class="offre">
+          <h3>Entretien</h3>
+          <div class="offre__corps">
+            <p>Un abonnement mensuel. Vous m'envoyez vos nouvelles photos ou
+              vos nouveaux tarifs, je mets à jour. <strong>Sans engagement de
+              durée.</strong></p>
+            <ul class="livre">
+              <li>Mises à jour de contenu</li>
+              <li>Petites modifications</li>
+              <li>Sauvegardes</li>
+            </ul>
+            {DEVIS}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--creuse">
+    <div class="enveloppe">
+      <div class="chapeau">
+        <h2>Questions fréquentes</h2>
+      </div>
+      <div class="offres">
+        <div class="offre">
+          <h3>Combien de temps ça prend&nbsp;?</h3>
+          <div class="offre__corps"><p>Environ trois semaines, du premier appel à la mise en ligne.</p></div>
+        </div>
+        <div class="offre">
+          <h3>À quoi sert le QR code&nbsp;?</h3>
+          <div class="offre__corps"><p>Vous le posez sur votre comptoir, votre carte de visite ou vos factures. Vos clients le scannent et arrivent directement sur la page pour laisser un avis.</p></div>
+        </div>
+        <div class="offre">
+          <h3>L'entretien est-il obligatoire&nbsp;?</h3>
+          <div class="offre__corps"><p>Non. Le site vous appartient. Vous pouvez prendre l'entretien, l'arrêter ou le reprendre quand vous voulez.</p></div>
+        </div>
+        <div class="offre">
+          <h3>Comment avoir un prix&nbsp;?</h3>
+          <div class="offre__corps"><p>Écrivez-moi votre métier et ce que vous voulez sur le site. Je vous envoie un devis écrit, sans engagement.</p></div>
+        </div>
+        <div class="offre">
+          <h3>Comment vous joindre&nbsp;?</h3>
+          <div class="offre__corps"><p>Par e-mail à <a href="mailto:contact@soteros.fr">contact@soteros.fr</a>. Je réponds en général dans la journée.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="enveloppe">
+      <div class="appel">
+        <h2>On en parle&nbsp;?</h2>
+        <p>Dites-moi votre métier et votre ville. Je reviens vers vous avec un
+          devis clair.</p>
+        <a class="bouton" href="mailto:contact@soteros.fr?subject=Demande%20de%20devis">Demander un devis</a>
+        <p style="margin-top:1.6rem"><a class="lien" href="contact.html">Contact</a></p>
+      </div>
+    </div>
+  </section>
+"""
+
 PAGES = [
     ("index.html", "Soteros — Création de sites et présence Google",
      "Soteros construit votre site sur mesure et installe votre présence sur "
@@ -768,6 +834,10 @@ PAGES = [
      "Création de sites écrits à la main, fiche Google, page d'avis et "
      "référencement local.",
      EXPERTISE),
+    ("offres.html", "Offres — Soteros",
+     "Création de site avec fiche Google, page d'avis et QR code offerts. "
+     "Entretien mensuel sans engagement.",
+     OFFRES),
     ("projets.html", "Projets — Soteros",
      "Deux sites livrés et en ligne, pour une nail artist et un photographe "
      "en Île-de-France.",

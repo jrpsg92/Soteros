@@ -18,7 +18,7 @@ RACINE = Path(__file__).resolve().parent.parent
 SORTIE = RACINE / "tools" / "captures"
 SORTIE.mkdir(parents=True, exist_ok=True)
 
-PAGES = ["index", "expertise", "projets", "agence", "engagement", "contact"]
+PAGES = ["index", "expertise", "offres", "projets", "agence", "engagement", "contact"]
 POSTES = [("telephone", 390, 844), ("bureau", 1440, 900)]
 LARGEURS_MENU = [390, 430, 768, 1440]
 
@@ -51,8 +51,8 @@ with sync_playwright() as pw:
                      f"{cible} — un seul h1")
 
             # La navigation doit porter les cinq entrées sur chaque page.
-            verifier(page.locator("[data-nav] a").count() == 6,
-                     f"{cible} — six entrées de navigation")
+            verifier(page.locator("[data-nav] a").count() == 7,
+                     f"{cible} — sept entrées de navigation")
 
             # Aucun lien mort hors emplacements marqués.
             morts = page.eval_on_selector_all(
