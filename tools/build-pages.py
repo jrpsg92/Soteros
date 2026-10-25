@@ -151,7 +151,7 @@ ACCUEIL = """
           les indépendants et les petites structures.
         </p>
         <div class="ouverture__actions">
-          <a class="bouton" href="contact.html">Parler de votre projet</a>
+          <a class="bouton" href="mailto:contact@soteros.fr?subject=Demande%20de%20devis">Demander un devis</a>
           <a class="lien" href="projets.html">Voir les projets</a>
         </div>
       </div>
@@ -319,7 +319,8 @@ ACCUEIL = """
         <h2>Prêt à être trouvé&nbsp;?</h2>
         <p>Dites-moi ce que vous faites et où vous le faites. Je reviens vers
           vous avec une proposition claire et un prix ferme.</p>
-        <a class="bouton" href="contact.html">Parler de votre projet</a>
+        <a class="bouton" href="mailto:contact@soteros.fr?subject=Demande%20de%20devis">Demander un devis</a>
+        <p style="margin-top:1.6rem"><a class="lien" href="contact.html">Contact</a></p>
       </div>
     </div>
   </section>
@@ -396,32 +397,14 @@ EXPERTISE = """
     </div>
   </section>
 
-  <section class="section section--creuse">
-    <div class="enveloppe">
-      <div class="prose">
-        <h2>Ce que je ne fais pas</h2>
-        <p class="fort">Autant le dire tout de suite, ça vous évitera un
-          rendez-vous pour rien.</p>
-        <p>Je ne promets pas la première place sur Google en une semaine.
-          Personne ne peut la promettre, et ceux qui le font vous vendent du
-          vent. Le référencement local donne des résultats en quelques
-          semaines, pas en trois jours.</p>
-        <p>Je ne travaille pas sur WordPress. Si votre site actuel tourne
-          dessus et que vous voulez le garder tel quel, je ne suis pas la
-          bonne personne.</p>
-        <p>Je ne prends pas de mandat sur votre publicité. Je construis et je
-          rends visible, je ne gère pas vos campagnes payantes.</p>
-      </div>
-    </div>
-  </section>
-
   <section class="section">
     <div class="enveloppe">
       <div class="appel">
         <h2>Un projet en tête&nbsp;?</h2>
         <p>Décrivez-le en trois lignes. Je vous dis franchement si je peux
           aider et combien ça coûte.</p>
-        <a class="bouton" href="contact.html">Écrire à Soteros</a>
+        <a class="bouton" href="mailto:contact@soteros.fr?subject=Demande%20de%20devis">Demander un devis</a>
+        <p style="margin-top:1.6rem"><a class="lien" href="contact.html">Contact</a></p>
       </div>
     </div>
   </section>
@@ -490,7 +473,8 @@ PROJETS = """
         <h2>Le prochain, c'est le vôtre</h2>
         <p>Dites-moi votre métier et votre ville. Je vous réponds avec une
           proposition claire.</p>
-        <a class="bouton" href="contact.html">Parler de votre projet</a>
+        <a class="bouton" href="mailto:contact@soteros.fr?subject=Demande%20de%20devis">Demander un devis</a>
+        <p style="margin-top:1.6rem"><a class="lien" href="contact.html">Contact</a></p>
       </div>
     </div>
   </section>
@@ -544,7 +528,8 @@ AGENCE = """
         <h2>On se parle&nbsp;?</h2>
         <p>Un appel d'une heure suffit pour savoir si le projet tient debout.
           Il est gratuit et sans suite obligatoire.</p>
-        <a class="bouton" href="contact.html">Prendre contact</a>
+        <a class="bouton" href="mailto:contact@soteros.fr?subject=Demande%20de%20devis">Demander un devis</a>
+        <p style="margin-top:1.6rem"><a class="lien" href="contact.html">Contact</a></p>
       </div>
     </div>
   </section>
@@ -680,7 +665,8 @@ ENGAGEMENT = """
         <h2>Un site léger, ça se voit</h2>
         <p>Vos visiteurs le ressentent avant de comprendre pourquoi, et
           Google le mesure pour de bon.</p>
-        <a class="bouton" href="contact.html">Parler de votre projet</a>
+        <a class="bouton" href="mailto:contact@soteros.fr?subject=Demande%20de%20devis">Demander un devis</a>
+        <p style="margin-top:1.6rem"><a class="lien" href="contact.html">Contact</a></p>
       </div>
     </div>
   </section>
