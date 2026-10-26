@@ -551,6 +551,10 @@ CONTACT = f"""
             <input id="prenom" name="Prénom" type="text" autocomplete="given-name" required>
           </div>
         </div>
+        <div class="champ">
+          <label for="entreprise">Nom de l'entreprise <span class="champ__option">facultatif</span></label>
+          <input id="entreprise" name="Entreprise" type="text" autocomplete="organization">
+        </div>
         <div class="formulaire__rangee">
           <div class="champ">
             <label for="email">E-mail</label>
@@ -713,7 +717,7 @@ LEGALES = """
 
         <h2>Données personnelles</h2>
         <p>Les informations envoyées par le formulaire de contact (nom,
-          prénom, e-mail, téléphone et message) servent uniquement à répondre
+          prénom, entreprise, e-mail, téléphone et message) servent uniquement à répondre
           à votre demande. Elles sont transmises par le service FormSubmit
           puis conservées dans notre messagerie. Elles ne sont ni cédées ni
           utilisées à des fins commerciales.</p>
