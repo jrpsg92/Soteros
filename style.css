@@ -556,6 +556,77 @@ body::before {
 .voie__valeur a:hover { color: var(--action); border-bottom-color: var(--action); }
 .voie__note { color: var(--plume-doux); font-size: .92rem; }
 
+/* Le formulaire à gauche, les coordonnées à droite sur grand écran. */
+.contact {
+  display: grid;
+  gap: clamp(3rem, 6vw, 5rem);
+  margin-top: clamp(2.5rem, 6vw, 4rem);
+  scroll-margin-top: 6.5rem;   /* l'en-tête fixe ne masque pas le formulaire */
+}
+@media (min-width: 62rem) {
+  .contact { grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); align-items: start; }
+  .contact .voie { grid-template-columns: minmax(0, 1fr); }
+}
+.contact .voies { margin-top: 0; }
+
+.formulaire { display: grid; gap: 1.4rem; }
+.formulaire[hidden] { display: none; }
+.formulaire__rangee { display: grid; gap: 1.4rem; }
+@media (min-width: 40rem) {
+  .formulaire__rangee { grid-template-columns: 1fr 1fr; }
+}
+
+.champ { display: grid; gap: .45rem; }
+.champ label { font-size: .9rem; font-weight: 500; color: var(--plume); }
+.champ__option { font-weight: 400; color: var(--plume-doux); }
+.champ input,
+.champ textarea {
+  width: 100%;
+  font: inherit;
+  color: var(--plume);
+  background: var(--blanc);
+  border: 1px solid var(--filet-fort);
+  border-radius: 12px;
+  padding: .85rem 1rem;
+  transition: border-color .25s var(--courbe), box-shadow .25s var(--courbe);
+}
+.champ textarea { min-height: 9rem; resize: vertical; }
+.champ input:focus,
+.champ textarea:focus {
+  outline: none;
+  border-color: var(--action);
+  box-shadow: 0 0 0 3px rgb(11 95 208 / .18);
+}
+.champ__aide { font-size: .86rem; color: var(--plume-doux); }
+
+.formulaire .bouton {
+  justify-self: start;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+  line-height: inherit;
+}
+.formulaire .bouton:disabled { opacity: .6; cursor: progress; transform: none; }
+
+.formulaire__mention { font-size: .86rem; color: var(--plume-doux); }
+.formulaire__mention a { color: var(--plume); }
+
+/* Champ piège invisible : un robot le remplit, FormSubmit jette l'envoi. */
+.formulaire__piege {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.formulaire__merci {
+  border: 1px solid var(--filet-fort);
+  background: var(--blanc);
+  padding: clamp(2rem, 5vw, 3rem);
+}
+.formulaire__merci p { margin-top: 1rem; color: var(--plume-doux); }
+
 /* --- Appel à l'action -------------------------------------------------- */
 
 .appel {

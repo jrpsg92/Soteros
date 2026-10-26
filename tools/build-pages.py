@@ -151,7 +151,7 @@ ACCUEIL = """
           vous trouvent en premier
         </p>
         <div class="ouverture__actions">
-          <a class="bouton" href="mailto:contact@soteros.fr?subject=Demande%20de%20devis">Demander un devis</a>
+          <a class="bouton" href="contact.html?objet=devis#formulaire">Demander un devis</a>
           <a class="lien" href="projets.html">Voir les projets</a>
         </div>
       </div>
@@ -216,7 +216,7 @@ ACCUEIL = """
           </div>
         </div>
       </div>
-      <p style="margin-top:clamp(2rem,5vw,3rem)"><a class="bouton" href="mailto:contact@soteros.fr?subject=Demande%20de%20devis">Demander un devis</a></p>
+      <p style="margin-top:clamp(2rem,5vw,3rem)"><a class="bouton" href="contact.html?objet=devis#formulaire">Demander un devis</a></p>
     </div>
   </section>
 
@@ -316,7 +316,7 @@ ACCUEIL = """
         <h2>Un projet de site internet&nbsp;?</h2>
         <p>Parlez-nous de votre activité. Nous vous répondons rapidement avec
           un devis personnalisé.</p>
-        <a class="bouton" href="mailto:contact@soteros.fr?subject=Demande%20de%20devis">Demander un devis</a>
+        <a class="bouton" href="contact.html?objet=devis#formulaire">Demander un devis</a>
         <p style="margin-top:1.6rem"><a class="lien" href="contact.html">Contact</a></p>
       </div>
     </div>
@@ -401,7 +401,7 @@ EXPERTISE = """
         <h2>Vous avez un projet&nbsp;?</h2>
         <p>Décrivez-le en quelques lignes. Nous vous répondons rapidement avec
           un devis personnalisé.</p>
-        <a class="bouton" href="mailto:contact@soteros.fr?subject=Demande%20de%20devis">Demander un devis</a>
+        <a class="bouton" href="contact.html?objet=devis#formulaire">Demander un devis</a>
         <p style="margin-top:1.6rem"><a class="lien" href="contact.html">Contact</a></p>
       </div>
     </div>
@@ -464,7 +464,7 @@ PROJETS = """
         <h2>Et si le prochain projet était le vôtre&nbsp;?</h2>
         <p>Parlez-nous de votre activité. Nous vous répondons avec une
           proposition adaptée.</p>
-        <a class="bouton" href="mailto:contact@soteros.fr?subject=Demande%20de%20devis">Demander un devis</a>
+        <a class="bouton" href="contact.html?objet=devis#formulaire">Demander un devis</a>
         <p style="margin-top:1.6rem"><a class="lien" href="contact.html">Contact</a></p>
       </div>
     </div>
@@ -513,22 +513,75 @@ AGENCE = """
         <h2>Parlons de votre projet</h2>
         <p>Un premier échange permet de comprendre vos besoins. Il est
           gratuit et sans engagement.</p>
-        <a class="bouton" href="mailto:contact@soteros.fr?subject=Demande%20de%20devis">Demander un devis</a>
+        <a class="bouton" href="contact.html?objet=devis#formulaire">Demander un devis</a>
         <p style="margin-top:1.6rem"><a class="lien" href="contact.html">Contact</a></p>
       </div>
     </div>
   </section>
 """
 
-CONTACT = """
+CONTACT = f"""
   <section class="section">
     <div class="enveloppe">
       <div class="chapeau">
         <p class="repere">Contact</p>
         <h1 class="leve"><span>Contactez-nous</span></h1>
-        <p>Une question ou un projet&nbsp;? Écrivez-nous et nous vous
-          répondrons dans les meilleurs délais.</p>
+        <p>Une question ou un projet&nbsp;? Remplissez le formulaire et nous
+          vous répondrons dans les meilleurs délais.</p>
       </div>
+
+      <div class="contact" id="formulaire">
+      <div>
+      <!-- Envoi par FormSubmit vers contact@soteros.fr. La toute première
+           demande déclenche un e-mail d'activation à valider une fois. -->
+      <form class="formulaire" action="https://formsubmit.co/contact@soteros.fr" method="POST" data-formulaire>
+        <input type="hidden" name="_subject" value="Nouvelle demande depuis le site Soteros">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="{BASE}contact.html?envoye=1#formulaire">
+        <input type="text" name="_honey" class="formulaire__piege" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <div class="formulaire__rangee">
+          <div class="champ">
+            <label for="nom">Nom</label>
+            <input id="nom" name="Nom" type="text" autocomplete="family-name" required>
+          </div>
+          <div class="champ">
+            <label for="prenom">Prénom</label>
+            <input id="prenom" name="Prénom" type="text" autocomplete="given-name" required>
+          </div>
+        </div>
+        <div class="formulaire__rangee">
+          <div class="champ">
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="champ">
+            <label for="telephone">Téléphone <span class="champ__option">facultatif</span></label>
+            <input id="telephone" name="Téléphone" type="tel" autocomplete="tel">
+          </div>
+        </div>
+        <div class="champ">
+          <label for="objet">Objet</label>
+          <input id="objet" name="Objet" type="text" required>
+        </div>
+        <div class="champ">
+          <label for="message">Message</label>
+          <textarea id="message" name="Message" rows="6" required aria-describedby="message-aide"></textarea>
+          <p class="champ__aide" id="message-aide">Votre activité, votre ville et votre échéance nous aident à établir un devis</p>
+        </div>
+        <button class="bouton" type="submit">Envoyer la demande</button>
+        <p class="formulaire__mention">Vos informations servent uniquement à
+          répondre à votre demande. <a href="mentions-legales.html">En savoir plus</a></p>
+      </form>
+
+      <div class="formulaire__merci" data-merci role="status" hidden>
+        <h2>Merci pour votre message</h2>
+        <p>Votre demande a bien été envoyée. Nous vous répondrons dans les
+          meilleurs délais.</p>
+      </div>
+      </div>
+
       <div class="voies">
         <div class="voie">
           <p class="voie__nom">E-mail</p>
@@ -545,33 +598,6 @@ CONTACT = """
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section class="section section--creuse">
-    <div class="enveloppe">
-      <div class="chapeau">
-        <h2>Pour préparer votre demande</h2>
-        <p>Quelques informations suffisent pour établir un premier
-          devis</p>
-      </div>
-      <div class="offres">
-        <div class="offre">
-          <h3>Votre activité</h3>
-          <div class="offre__corps"><p>Votre métier et ce qui vous distingue</p></div>
-        </div>
-        <div class="offre">
-          <h3>Votre ville</h3>
-          <div class="offre__corps"><p>La commune où vous exercez, essentielle pour le référencement local</p></div>
-        </div>
-        <div class="offre">
-          <h3>Votre site actuel</h3>
-          <div class="offre__corps"><p>Son adresse si vous en avez déjà un</p></div>
-        </div>
-        <div class="offre">
-          <h3>Votre échéance</h3>
-          <div class="offre__corps"><p>Une date d'ouverture, une saison ou un événement à préparer</p></div>
-        </div>
       </div>
     </div>
   </section>
@@ -648,7 +674,7 @@ ENGAGEMENT = """
         <h2>Un site léger fait la différence</h2>
         <p>Vos visiteurs profitent d'un site plus rapide et Google en tient
           compte dans son classement.</p>
-        <a class="bouton" href="mailto:contact@soteros.fr?subject=Demande%20de%20devis">Demander un devis</a>
+        <a class="bouton" href="contact.html?objet=devis#formulaire">Demander un devis</a>
         <p style="margin-top:1.6rem"><a class="lien" href="contact.html">Contact</a></p>
       </div>
     </div>
@@ -686,11 +712,17 @@ LEGALES = """
           apparaissent ici avec leur accord.</p>
 
         <h2>Données personnelles</h2>
-        <p>Ce site est une vitrine. Il ne comporte aucun formulaire, ne dépose
-          aucun cookie de mesure d'audience et ne collecte aucune donnée
-          pendant la navigation. Les polices de caractères sont chargées
-          depuis Google&nbsp;Fonts, ce qui transmet votre adresse IP à Google
-          lors de l'affichage des pages.</p>
+        <p>Les informations envoyées par le formulaire de contact (nom,
+          prénom, e-mail, téléphone et message) servent uniquement à répondre
+          à votre demande. Elles sont transmises par le service FormSubmit
+          puis conservées dans notre messagerie. Elles ne sont ni cédées ni
+          utilisées à des fins commerciales.</p>
+        <p>Vous pouvez demander l'accès à vos données, leur correction ou
+          leur suppression en écrivant à
+          <a href="mailto:contact@soteros.fr">contact@soteros.fr</a>.</p>
+        <p>Ce site ne dépose aucun cookie de mesure d'audience. Les polices de
+          caractères sont chargées depuis Google&nbsp;Fonts, ce qui transmet
+          votre adresse IP à Google lors de l'affichage des pages.</p>
 
         <h2>Accessibilité</h2>
         <p>Ce site vise les critères WCAG&nbsp;2.1 niveau AA. Si vous
@@ -701,7 +733,7 @@ LEGALES = """
   </section>
 """
 
-DEVIS = '<p style="margin-top:1.4rem"><a class="bouton" href="mailto:contact@soteros.fr?subject=Demande%20de%20devis">Demander un devis</a></p>'
+DEVIS = '<p style="margin-top:1.4rem"><a class="bouton" href="contact.html?objet=devis#formulaire">Demander un devis</a></p>'
 
 
 OFFRES = f"""
@@ -787,7 +819,7 @@ OFFRES = f"""
         <h2>Discutons de votre projet</h2>
         <p>Parlez-nous de votre activité. Nous vous répondons avec un devis
           personnalisé.</p>
-        <a class="bouton" href="mailto:contact@soteros.fr?subject=Demande%20de%20devis">Demander un devis</a>
+        <a class="bouton" href="contact.html?objet=devis#formulaire">Demander un devis</a>
         <p style="margin-top:1.6rem"><a class="lien" href="contact.html">Contact</a></p>
       </div>
     </div>

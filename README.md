@@ -13,7 +13,7 @@ dépendance, aucun constructeur. Publié par GitHub Pages.
 | `projets.html` | Nails by Deb et Raju Sinniah |
 | `agence.html` | Qui est derrière Soteros |
 | `engagement.html` | Éco-conception |
-| `contact.html` | Coordonnées |
+| `contact.html` | Formulaire de contact et coordonnées |
 | `mentions-legales.html` | Obligatoire, **à compléter** |
 
 ## Ne pas modifier les pages à la main
@@ -82,3 +82,12 @@ son squelette HTML, pour être publiée comme aperçu. Dossier non versionné.
 
 - Compléter `mentions-legales.html`, obligatoire en France, article 6 LCEN
 - Renseigner les comptes réseaux dans `tools/build-pages.py`, fonction `pied()`
+
+## Formulaire de contact
+
+Le formulaire de `contact.html` s'envoie par FormSubmit, un service
+gratuit et sans compte. Les demandes arrivent sur `contact@soteros.fr`.
+
+La toute première demande déclenche un e-mail d'activation sur cette
+adresse. Il faut cliquer sur le bouton de confirmation une seule fois,
+sinon rien n'arrive. Pensez à regarder les spams.

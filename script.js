@@ -52,6 +52,49 @@
     window.addEventListener("scroll", poser, { passive: true });
   }
 
+  /* --- Formulaire de contact ------------------------------------------
+     L'envoi passe par FormSubmit, qui renvoie ensuite sur cette page avec
+     ?envoye=1. Sans JavaScript, le formulaire s'envoie quand même. */
+
+  var formulaire = document.querySelector("[data-formulaire]");
+  if (formulaire) {
+    var objet = formulaire.querySelector("[name='Objet']");
+    var sujet = formulaire.querySelector("[name='_subject']");
+    var envoi = formulaire.querySelector("[type='submit']");
+    var libelleEnvoi = envoi ? envoi.textContent : "";
+    var recherche = window.location.search;
+
+    if (objet && /[?&]objet=devis/.test(recherche) && !objet.value) {
+      objet.value = "Demande de devis";
+    }
+
+    formulaire.addEventListener("submit", function () {
+      if (objet && sujet && objet.value.trim()) {
+        sujet.value = "Site Soteros · " + objet.value.trim();
+      }
+      if (envoi) { envoi.disabled = true; envoi.textContent = "Envoi en cours…"; }
+    });
+
+    // Retour arrière depuis la page suivante : le bouton redevient actif.
+    window.addEventListener("pageshow", function () {
+      if (envoi) { envoi.disabled = false; envoi.textContent = libelleEnvoi; }
+    });
+
+    if (/[?&]envoye=1/.test(recherche)) {
+      var merci = document.querySelector("[data-merci]");
+      if (merci) { merci.hidden = false; formulaire.hidden = true; }
+    }
+
+    // Arrivée par un bouton devis : on recale le formulaire sous l'en-tête
+    // une fois les polices chargées, qui décalent la mise en page.
+    if (window.location.hash === "#formulaire") {
+      window.addEventListener("load", function () {
+        var cible = document.getElementById("formulaire");
+        if (cible) cible.scrollIntoView({ block: "start", behavior: "instant" });
+      });
+    }
+  }
+
   /* =====================================================================
      L'instrument.
 

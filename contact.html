@@ -57,9 +57,62 @@
       <div class="chapeau">
         <p class="repere">Contact</p>
         <h1 class="leve"><span>Contactez-nous</span></h1>
-        <p>Une question ou un projet&nbsp;? Écrivez-nous et nous vous
-          répondrons dans les meilleurs délais.</p>
+        <p>Une question ou un projet&nbsp;? Remplissez le formulaire et nous
+          vous répondrons dans les meilleurs délais.</p>
       </div>
+
+      <div class="contact" id="formulaire">
+      <div>
+      <!-- Envoi par FormSubmit vers contact@soteros.fr. La toute première
+           demande déclenche un e-mail d'activation à valider une fois. -->
+      <form class="formulaire" action="https://formsubmit.co/contact@soteros.fr" method="POST" data-formulaire>
+        <input type="hidden" name="_subject" value="Nouvelle demande depuis le site Soteros">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://jrpsg92.github.io/Soteros/contact.html?envoye=1#formulaire">
+        <input type="text" name="_honey" class="formulaire__piege" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <div class="formulaire__rangee">
+          <div class="champ">
+            <label for="nom">Nom</label>
+            <input id="nom" name="Nom" type="text" autocomplete="family-name" required>
+          </div>
+          <div class="champ">
+            <label for="prenom">Prénom</label>
+            <input id="prenom" name="Prénom" type="text" autocomplete="given-name" required>
+          </div>
+        </div>
+        <div class="formulaire__rangee">
+          <div class="champ">
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="champ">
+            <label for="telephone">Téléphone <span class="champ__option">facultatif</span></label>
+            <input id="telephone" name="Téléphone" type="tel" autocomplete="tel">
+          </div>
+        </div>
+        <div class="champ">
+          <label for="objet">Objet</label>
+          <input id="objet" name="Objet" type="text" required>
+        </div>
+        <div class="champ">
+          <label for="message">Message</label>
+          <textarea id="message" name="Message" rows="6" required aria-describedby="message-aide"></textarea>
+          <p class="champ__aide" id="message-aide">Votre activité, votre ville et votre échéance nous aident à établir un devis</p>
+        </div>
+        <button class="bouton" type="submit">Envoyer la demande</button>
+        <p class="formulaire__mention">Vos informations servent uniquement à
+          répondre à votre demande. <a href="mentions-legales.html">En savoir plus</a></p>
+      </form>
+
+      <div class="formulaire__merci" data-merci role="status" hidden>
+        <h2>Merci pour votre message</h2>
+        <p>Votre demande a bien été envoyée. Nous vous répondrons dans les
+          meilleurs délais.</p>
+      </div>
+      </div>
+
       <div class="voies">
         <div class="voie">
           <p class="voie__nom">E-mail</p>
@@ -76,33 +129,6 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <section class="section section--creuse">
-    <div class="enveloppe">
-      <div class="chapeau">
-        <h2>Pour préparer votre demande</h2>
-        <p>Quelques informations suffisent pour établir un premier
-          devis</p>
-      </div>
-      <div class="offres">
-        <div class="offre">
-          <h3>Votre activité</h3>
-          <div class="offre__corps"><p>Votre métier et ce qui vous distingue</p></div>
-        </div>
-        <div class="offre">
-          <h3>Votre ville</h3>
-          <div class="offre__corps"><p>La commune où vous exercez, essentielle pour le référencement local</p></div>
-        </div>
-        <div class="offre">
-          <h3>Votre site actuel</h3>
-          <div class="offre__corps"><p>Son adresse si vous en avez déjà un</p></div>
-        </div>
-        <div class="offre">
-          <h3>Votre échéance</h3>
-          <div class="offre__corps"><p>Une date d'ouverture, une saison ou un événement à préparer</p></div>
-        </div>
       </div>
     </div>
   </section>
