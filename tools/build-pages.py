@@ -105,8 +105,8 @@ def pied() -> str:
           <img src="img/marque-64.png" width="64" height="64" alt="Logo Soteros">
           <span>Soteros</span>
         </p>
-        <p>Création de sites et présence Google.<br>
-           Île-de-France et à distance partout en France.</p>
+        <p>Création de sites et présence Google<br>
+           Île-de-France et à distance dans toute la France</p>
       </div>
       <div>
         <p class="pied__intitule">Le site</p>
@@ -147,8 +147,8 @@ ACCUEIL = """
           <span class="bienvenue__marque leve leve--2"><span>chez <span class="nom-marque">Soteros</span></span></span>
         </h1>
         <p class="ouverture__intro">
-          On vous rend trouvable. Sites sur mesure et présence Google, pour
-          les indépendants et les petites structures.
+          Un site sur mesure et une présence Google pour que vos clients
+          vous trouvent en premier
         </p>
         <div class="ouverture__actions">
           <a class="bouton" href="mailto:contact@soteros.fr?subject=Demande%20de%20devis">Demander un devis</a>
@@ -163,25 +163,24 @@ ACCUEIL = """
     <div class="enveloppe">
       <div class="chapeau">
         <p class="repere">Expertise</p>
-        <h2>Le site, et les clients qui vont avec</h2>
-        <p>Un beau site que personne ne trouve ne sert à rien. Un bon
-          référencement qui mène vers un site bancal non plus. Les deux se
-          travaillent ensemble.</p>
+        <h2>Un site et une visibilité pensés ensemble</h2>
+        <p>Un site performant n'a de valeur que s'il est trouvé. Nous
+          traitons donc le site et le référencement en même temps.</p>
       </div>
 
       <div class="offres">
         <div class="offre">
           <h3>Sites sur mesure</h3>
           <div class="offre__corps">
-            <p>Chaque page est écrite à la main. Pas de thème acheté, pas de
-              constructeur qui alourdit tout. <strong>Le site s'ouvre en moins
-              d'une seconde</strong> et s'affiche aussi bien sur un téléphone
-              que sur un grand écran.</p>
+            <p>Chaque page est développée à la main sans thème acheté ni
+              constructeur. <strong>Le site s'ouvre en moins d'une
+              seconde</strong> et s'affiche parfaitement sur téléphone comme
+              sur ordinateur.</p>
             <ul class="livre">
               <li>Design sur mesure</li>
-              <li>Code écrit à la main</li>
-              <li>Téléphone d'abord</li>
-              <li>Hébergement compris</li>
+              <li>Code développé à la main</li>
+              <li>Conçu pour le mobile</li>
+              <li>Hébergement inclus</li>
             </ul>
           </div>
         </div>
@@ -189,11 +188,11 @@ ACCUEIL = """
         <div class="offre">
           <h3>Présence Google</h3>
           <div class="offre__corps">
-            <p>Je crée et je règle votre fiche Google, celle qui sort avec la
-              carte et les étoiles quand quelqu'un cherche votre métier près
-              de chez lui. <strong>J'installe aussi la page qui invite vos
-              clients à laisser un avis</strong>, et je vous montre comment la
-              partager.</p>
+            <p>Nous créons et optimisons votre fiche Google. C'est elle qui
+              apparaît avec la carte et les avis quand un client cherche votre
+              métier près de chez lui. <strong>Nous installons aussi une page
+              dédiée aux avis clients</strong> et vous accompagnons pour la
+              diffuser.</p>
             <ul class="livre">
               <li>Fiche Google</li>
               <li>Page d'avis</li>
@@ -206,9 +205,10 @@ ACCUEIL = """
         <div class="offre">
           <h3>Suivi</h3>
           <div class="offre__corps">
-            <p>Un site vit. Nouvelles photos, nouveaux tarifs, une page de
-              plus avant la saison. <strong>Vous écrivez, je m'en occupe</strong>,
-              sans engagement de durée.</p>
+            <p>Un site évolue avec votre activité. Nouvelles photos, nouveaux
+              tarifs ou nouvelle page avant la saison. <strong>Vous nous
+              transmettez vos demandes et nous nous occupons du
+              reste</strong> sans engagement de durée.</p>
             <ul class="livre">
               <li>Mises à jour</li>
               <li>Nouvelles pages</li>
@@ -217,6 +217,7 @@ ACCUEIL = """
           </div>
         </div>
       </div>
+      <p style="margin-top:clamp(2rem,5vw,3rem)"><a class="bouton" href="mailto:contact@soteros.fr?subject=Demande%20de%20devis">Demander un devis</a></p>
     </div>
   </section>
 
@@ -224,9 +225,9 @@ ACCUEIL = """
     <div class="enveloppe">
       <div class="chapeau">
         <p class="repere">Projets</p>
-        <h2>Deux clientes, deux univers</h2>
-        <p>Les deux sites tournent en ligne aujourd'hui. Ouvrez-les, regardez
-          la vitesse de chargement.</p>
+        <h2>Deux métiers, deux univers</h2>
+        <p>Ces deux sites sont en ligne. Découvrez-les et constatez leur
+          vitesse de chargement.</p>
       </div>
 
       <div class="projets">
@@ -234,9 +235,9 @@ ACCUEIL = """
           <p class="projet__meta">Nail artist, Val-d'Oise</p>
           <h3>Nails by Deb</h3>
           <p class="projet__corps">Site vitrine et galerie de réalisations.
-            La page d'accueil pesait plus d'un mégaoctet, elle en fait deux
-            cents kilo-octets. Photos converties, contrastes corrigés, pages
-            indexées.</p>
+            La page d'accueil est passée de plus d'un mégaoctet à deux cents
+            kilo-octets. Photos optimisées, contrastes corrigés et pages
+            indexées sur Google.</p>
           <p class="projet__voir">Ouvrir le site</p>
         </a>
 
@@ -244,8 +245,8 @@ ACCUEIL = """
           <p class="projet__meta">Photographe, Île-de-France</p>
           <h3>Raju Sinniah</h3>
           <p class="projet__corps">Portfolio de cent trente-six photographies
-            réparties en trois séries. Tout se génère depuis un seul fichier,
-            donc ajouter une photo prend une minute.</p>
+            réparties en trois séries. Le site se met à jour depuis un fichier
+            unique et l'ajout d'une photo prend une minute.</p>
           <p class="projet__voir">Ouvrir le site</p>
         </a>
       </div>
@@ -257,8 +258,8 @@ ACCUEIL = """
       <div class="chapeau">
         <p class="repere">Engagement</p>
         <h2>Créer des expériences digitales responsables et désirables</h2>
-        <p>Réduire l'empreinte environnementale de chaque site produit, par
-          la mesure plutôt que par la promesse.</p>
+        <p>Réduire l'empreinte environnementale de chaque site grâce à la
+          mesure plutôt qu'à la promesse</p>
         <p style="margin-top:1.6rem"><a class="lien" href="engagement.html">Voir l'engagement</a></p>
       </div>
     </div>
@@ -269,44 +270,45 @@ ACCUEIL = """
       <div class="chapeau">
         <p class="repere">Déroulé</p>
         <h2>Cinq étapes, trois semaines</h2>
-        <p>Vous savez à chaque moment où en est le travail et ce qu'on attend
-          de vous.</p>
+        <p>Vous savez à chaque étape où en est le projet et ce que nous
+          attendons de vous</p>
       </div>
 
       <ol class="deroule">
         <li>
           <div>
-            <h3>On parle de votre métier</h3>
-            <p>Un appel d'une heure. Qui sont vos clients, ce qu'ils tapent
-              dans Google, ce qui vous distingue de la rue d'à côté.</p>
+            <h3>Échange sur votre activité</h3>
+            <p>Un appel d'une heure pour comprendre vos clients, leurs
+              recherches sur Google et ce qui vous distingue de vos
+              concurrents.</p>
           </div>
         </li>
         <li>
           <div>
-            <h3>Je dessine</h3>
-            <p>Une maquette de la page d'accueil. Vous validez la direction
-              avant qu'une ligne de code soit écrite.</p>
+            <h3>Maquette</h3>
+            <p>Nous concevons la maquette de la page d'accueil. Vous validez
+              la direction avant le début du développement.</p>
           </div>
         </li>
         <li>
           <div>
-            <h3>Je construis</h3>
-            <p>Toutes les pages, les textes, les photos optimisées. Vous
+            <h3>Développement</h3>
+            <p>Toutes les pages, les textes et les photos optimisées. Vous
               suivez l'avancement sur une adresse privée.</p>
           </div>
         </li>
         <li>
           <div>
             <h3>Mise en ligne</h3>
-            <p>Nom de domaine, certificat, redirections. Vous ne touchez à
-              rien de technique.</p>
+            <p>Nom de domaine, certificat de sécurité et redirections. Nous
+              prenons en charge toute la partie technique.</p>
           </div>
         </li>
         <li>
           <div>
-            <h3>Google</h3>
-            <p>La fiche, la page d'avis, le suivi des recherches. C'est là que
-              le téléphone commence à sonner.</p>
+            <h3>Visibilité Google</h3>
+            <p>La fiche, la page d'avis et le suivi des recherches. C'est à
+              cette étape que les premières demandes arrivent.</p>
           </div>
         </li>
       </ol>
@@ -316,8 +318,8 @@ ACCUEIL = """
   <section class="section">
     <div class="enveloppe">
       <div class="appel">
-        <h2>Prêt à être trouvé&nbsp;?</h2>
-        <p>Dites-moi ce que vous faites et où vous le faites. Je reviens vers
+        <h2>Prêt à développer votre visibilité&nbsp;?</h2>
+        <p>Présentez-nous votre activité et votre secteur. Nous revenons vers
           vous avec une proposition claire et un prix ferme.</p>
         <a class="bouton" href="mailto:contact@soteros.fr?subject=Demande%20de%20devis">Demander un devis</a>
         <p style="margin-top:1.6rem"><a class="lien" href="contact.html">Contact</a></p>
@@ -332,28 +334,26 @@ EXPERTISE = """
       <div class="chapeau">
         <p class="repere">Expertise</p>
         <h1 class="leve"><span>Sites et visibilité</span></h1>
-        <p>Deux métiers qui se tiennent. Le premier vous donne une vitrine, le
-          second amène les gens devant.</p>
+        <p>Deux expertises complémentaires. Le site présente votre activité
+          et la visibilité Google vous amène des clients.</p>
       </div>
 
       <div class="offres">
         <div class="offre">
           <h3>Sites sur mesure</h3>
           <div class="offre__corps">
-            <p>J'écris le code à la main. Aucun thème acheté, aucun
-              constructeur qui charge trois cents kilo-octets de scripts pour
-              afficher un titre.</p>
+            <p>Le code est développé à la main. Aucun thème acheté ni
+              constructeur qui alourdit inutilement les pages.</p>
             <p style="margin-top:1rem">Le résultat se mesure. Les deux sites
               de la page Projets s'ouvrent en moins d'une seconde sur un
-              téléphone en 4G, et ils passent les critères d'accessibilité
-              WCAG niveau AA, ce qui veut dire que le texte reste lisible pour
-              tout le monde.</p>
+              téléphone en 4G. Ils respectent les critères d'accessibilité
+              WCAG niveau AA pour un texte lisible par tous.</p>
             <ul class="livre">
-              <li>Maquette validée avant le code</li>
-              <li>Pensé pour le téléphone d'abord</li>
-              <li>Photos converties et allégées</li>
+              <li>Maquette validée avant le développement</li>
+              <li>Conçu pour le mobile en priorité</li>
+              <li>Photos optimisées</li>
               <li>Balises et plan de site</li>
-              <li>Hébergement compris</li>
+              <li>Hébergement inclus</li>
               <li>Les fichiers vous appartiennent</li>
             </ul>
           </div>
@@ -362,13 +362,16 @@ EXPERTISE = """
         <div class="offre">
           <h3>Présence Google</h3>
           <div class="offre__corps">
-            <p>La plupart de vos clients ne vont pas chercher votre site, ils
-              tapent votre métier et leur ville. Ce qui sort en premier, c'est
-              la carte et les trois fiches à côté.</p>
-            <p style="margin-top:1rem">Je crée votre fiche, je la remplis
-              correctement, horaires, zone d'intervention, photos, catégorie
-              exacte. Puis j'installe la page qui demande un avis à vos
-              clients, avec le lien direct à envoyer après un rendez-vous.</p>
+            <p>La plupart de vos clients ne cherchent pas directement votre
+              site. Ils recherchent votre métier suivi de leur ville. Les
+              premiers résultats affichés sont la carte et trois fiches
+              d'établissement.</p>
+            <p style="margin-top:1rem">Nous créons votre fiche et renseignons
+              chaque information utile comme les horaires, la zone
+              d'intervention, les photos et la catégorie exacte. Nous
+              installons ensuite la page qui invite vos clients à laisser un
+              avis avec un lien direct à leur envoyer après chaque
+              rendez-vous.</p>
             <ul class="livre">
               <li>Fiche Google créée et vérifiée</li>
               <li>Page d'avis et lien à partager</li>
@@ -382,14 +385,14 @@ EXPERTISE = """
         <div class="offre">
           <h3>Suivi</h3>
           <div class="offre__corps">
-            <p>Vous m'envoyez les nouvelles photos ou le nouveau tarif, je
-              mets à jour. Pas de forfait obligatoire, pas d'engagement sur
-              deux ans.</p>
+            <p>Vous nous envoyez vos nouvelles photos ou vos nouveaux tarifs
+              et nous mettons le site à jour. Aucun forfait imposé ni
+              engagement de longue durée.</p>
             <ul class="livre">
               <li>Mises à jour de contenu</li>
               <li>Nouvelles pages</li>
               <li>Sauvegardes</li>
-              <li>Petites évolutions</li>
+              <li>Évolutions ponctuelles</li>
             </ul>
           </div>
         </div>
@@ -400,9 +403,9 @@ EXPERTISE = """
   <section class="section">
     <div class="enveloppe">
       <div class="appel">
-        <h2>Un projet en tête&nbsp;?</h2>
-        <p>Décrivez-le en trois lignes. Je vous dis franchement si je peux
-          aider et combien ça coûte.</p>
+        <h2>Vous avez un projet&nbsp;?</h2>
+        <p>Décrivez-le en quelques lignes. Nous vous indiquons rapidement ce
+          que nous pouvons faire et à quel prix.</p>
         <a class="bouton" href="mailto:contact@soteros.fr?subject=Demande%20de%20devis">Demander un devis</a>
         <p style="margin-top:1.6rem"><a class="lien" href="contact.html">Contact</a></p>
       </div>
@@ -415,9 +418,9 @@ PROJETS = """
     <div class="enveloppe">
       <div class="chapeau">
         <p class="repere">Projets</p>
-        <h1 class="leve"><span>Déjà en ligne</span></h1>
-        <p>Deux sites livrés, deux métiers très différents. Les deux sont
-          ouverts, allez les voir et comparez avec la concurrence.</p>
+        <h1 class="leve"><span>Réalisations</span></h1>
+        <p>Deux sites livrés pour deux métiers très différents. Ils sont en
+          ligne et vous pouvez les comparer à la concurrence.</p>
       </div>
 
       <div class="projets">
@@ -425,26 +428,25 @@ PROJETS = """
           <p class="projet__meta">Nail artist, Val-d'Oise</p>
           <h3>Nails by Deb</h3>
           <p class="projet__corps">Refonte complète d'un site existant. La
-            page d'accueil pesait plus d'un mégaoctet, elle en fait deux cents
-            kilo-octets. Les images ont été converties et allégées, les
-            contrastes du texte corrigés, et le site est passé d'invisible à
-            indexé avec son plan de site et ses balises.</p>
-          <p class="projet__corps">La galerie de réalisations se range par
-            type de pose, et toute la galerie se régénère depuis un seul
-            fichier.</p>
+            page d'accueil est passée de plus d'un mégaoctet à deux cents
+            kilo-octets. Les images ont été optimisées et les contrastes
+            corrigés. Le site est désormais indexé sur Google grâce à son plan
+            de site et ses balises.</p>
+          <p class="projet__corps">La galerie de réalisations est classée par
+            type de pose et se met à jour depuis un fichier unique.</p>
           <p class="projet__voir">Ouvrir le site</p>
         </a>
 
         <a class="projet" href="https://jrpsg92.github.io/Rajouphoto.fr/" rel="noopener">
           <p class="projet__meta">Photographe, Île-de-France</p>
           <h3>Raju Sinniah</h3>
-          <p class="projet__corps">Portfolio construit de zéro, cent
-            trente-six photographies rangées en trois séries. Chaque image
-            existe en trois largeurs, donc un téléphone ne télécharge jamais
-            la version d'un grand écran.</p>
-          <p class="projet__corps">Les pages se génèrent depuis un fichier
-            unique, ce qui veut dire qu'ajouter une série entière demande
-            quelques minutes au lieu d'une journée.</p>
+          <p class="projet__corps">Portfolio conçu de zéro avec cent
+            trente-six photographies réparties en trois séries. Chaque image
+            existe en trois largeurs pour qu'un téléphone ne télécharge jamais
+            la version grand écran.</p>
+          <p class="projet__corps">Les pages sont générées depuis un fichier
+            unique. L'ajout d'une série complète prend quelques minutes au
+            lieu d'une journée.</p>
           <p class="projet__voir">Ouvrir le site</p>
         </a>
       </div>
@@ -454,15 +456,15 @@ PROJETS = """
   <section class="section section--creuse">
     <div class="enveloppe">
       <div class="prose">
-        <h2>Comment je mesure un site</h2>
-        <p class="fort">Un site réussi, ça se chiffre. Voici ce que je regarde
-          avant de dire qu'il est fini.</p>
-        <p>Le poids de la page d'accueil, parce qu'un visiteur sur un
-          téléphone en bord de réseau part au bout de trois secondes. Le
-          contraste de chaque texte, parce qu'un gris clair sur blanc exclut
-          une partie de vos clients. La présence d'un texte de remplacement
-          sur chaque image, pour les lecteurs d'écran et pour Google. Et le
-          rendu réel sur un iPhone, pas sur une simulation.</p>
+        <h2>Comment nous évaluons un site</h2>
+        <p class="fort">Un site réussi se mesure. Voici les critères vérifiés
+          avant chaque livraison.</p>
+        <p>Le poids de la page d'accueil, car un visiteur sur mobile quitte la
+          page après trois secondes d'attente. Le contraste de chaque texte,
+          car un gris clair sur fond blanc exclut une partie de vos clients.
+          Un texte alternatif sur chaque image pour les lecteurs d'écran comme
+          pour Google. Enfin le rendu réel sur iPhone et non sur une
+          simulation.</p>
       </div>
     </div>
   </section>
@@ -470,9 +472,9 @@ PROJETS = """
   <section class="section">
     <div class="enveloppe">
       <div class="appel">
-        <h2>Le prochain, c'est le vôtre</h2>
-        <p>Dites-moi votre métier et votre ville. Je vous réponds avec une
-          proposition claire.</p>
+        <h2>Et si le prochain projet était le vôtre&nbsp;?</h2>
+        <p>Présentez-nous votre métier et votre ville. Nous vous répondons
+          avec une proposition claire.</p>
         <a class="bouton" href="mailto:contact@soteros.fr?subject=Demande%20de%20devis">Demander un devis</a>
         <p style="margin-top:1.6rem"><a class="lien" href="contact.html">Contact</a></p>
       </div>
@@ -490,34 +492,32 @@ AGENCE = """
 
       <div class="prose" style="margin-top:clamp(2.5rem,6vw,4rem)">
         <p class="fort">Le nom vient du grec sôtêr, celui qui protège et qui
-          sort d'affaire.</p>
-        <p>C'est à peu près le métier. Beaucoup d'indépendants ont un site qui
-          ne leur rapporte rien, ou pas de site du tout, et laissent filer des
-          clients qui les cherchaient à deux rues de là. Soteros existe pour
-          régler ça.</p>
+          tire d'affaire.</p>
+        <p>Cette idée guide notre travail. Beaucoup d'indépendants ont un site
+          qui ne leur apporte aucun client ou pas de site du tout. Ils passent
+          à côté de clients qui les cherchaient tout près de chez eux. Soteros
+          est né pour changer cela.</p>
 
-        <h2>Une seule personne, et c'est voulu</h2>
-        <p>Derrière Soteros il y a un développeur. Pas un plateau de dix
-          personnes, pas de commercial qui vend un projet avant de le passer à
-          un stagiaire. Vous parlez directement à celui qui écrit le code,
-          du premier appel à la mise en ligne.</p>
-        <p>Ça veut dire des réponses dans la journée, des décisions prises en
-          une minute, et personne à convaincre en interne pour changer une
-          couleur.</p>
+        <h2>Un interlocuteur unique</h2>
+        <p>Derrière Soteros se trouve un développeur. Pas d'équipe commerciale
+          ni de sous-traitance. Vous échangez directement avec la personne qui
+          conçoit votre site du premier appel à la mise en ligne.</p>
+        <p>Vous obtenez des réponses dans la journée et des décisions rapides
+          sans intermédiaire.</p>
 
-        <h2>Écrit à la main</h2>
-        <p>Chaque site part d'une page blanche. Aucun thème acheté, aucun
-          constructeur. C'est plus long à produire, et c'est exactement pour
-          ça que les pages s'ouvrent en moins d'une seconde quand la moyenne
-          du secteur dépasse les trois secondes.</p>
-        <p>Les fichiers vous appartiennent. Si un jour vous changez de
-          prestataire, vous partez avec votre site, sans abonnement à résilier
-          et sans rien à racheter.</p>
+        <h2>Développé à la main</h2>
+        <p>Chaque site part d'une page blanche sans thème ni constructeur. Ce
+          travail demande plus de temps. C'est aussi ce qui permet d'ouvrir
+          les pages en moins d'une seconde quand la moyenne du secteur dépasse
+          trois secondes.</p>
+        <p>Les fichiers vous appartiennent. Si vous changez un jour de
+          prestataire, vous conservez votre site sans abonnement à résilier ni
+          frais de rachat.</p>
 
-        <h2>Les clients</h2>
-        <p>Des artisans, des indépendants, des petites structures. Une nail
-          artist, un photographe, et la place pour quelques projets de plus
-          chaque trimestre, parce qu'au-delà la qualité tombe.</p>
+        <h2>Nos clients</h2>
+        <p>Des artisans, des indépendants et des petites entreprises. Une nail
+          artist, un photographe et quelques nouveaux projets chaque
+          trimestre. Ce nombre limité garantit la qualité de chaque site.</p>
       </div>
     </div>
   </section>
@@ -525,9 +525,9 @@ AGENCE = """
   <section class="section section--creuse">
     <div class="enveloppe">
       <div class="appel">
-        <h2>On se parle&nbsp;?</h2>
-        <p>Un appel d'une heure suffit pour savoir si le projet tient debout.
-          Il est gratuit et sans suite obligatoire.</p>
+        <h2>Parlons de votre projet</h2>
+        <p>Un premier échange d'une heure suffit pour cadrer votre projet. Il
+          est gratuit et sans engagement.</p>
         <a class="bouton" href="mailto:contact@soteros.fr?subject=Demande%20de%20devis">Demander un devis</a>
         <p style="margin-top:1.6rem"><a class="lien" href="contact.html">Contact</a></p>
       </div>
@@ -540,22 +540,22 @@ CONTACT = """
     <div class="enveloppe">
       <div class="chapeau">
         <p class="repere">Contact</p>
-        <h1 class="leve"><span>Écrivez-moi</span></h1>
-        <p>Je réponds moi-même, en général dans la journée.</p>
+        <h1 class="leve"><span>Contactez-nous</span></h1>
+        <p>Nous répondons en général dans la journée</p>
       </div>
       <div class="voies">
         <div class="voie">
           <p class="voie__nom">Courriel</p>
           <div>
             <p class="voie__valeur"><a href="mailto:contact@soteros.fr">contact@soteros.fr</a></p>
-            <p class="voie__note">Pour un devis ou une question.</p>
+            <p class="voie__note">Pour un devis ou une question</p>
           </div>
         </div>
         <div class="voie">
           <p class="voie__nom">Zone</p>
           <div>
             <p class="voie__valeur">Île-de-France</p>
-            <p class="voie__note">Et à distance partout en France.</p>
+            <p class="voie__note">Et à distance dans toute la France</p>
           </div>
         </div>
       </div>
@@ -565,25 +565,26 @@ CONTACT = """
   <section class="section section--creuse">
     <div class="enveloppe">
       <div class="chapeau">
-        <h2>Ce qui m'aide à répondre vite</h2>
-        <p>Quatre lignes suffisent, pas besoin d'un cahier des charges.</p>
+        <h2>Pour une réponse rapide</h2>
+        <p>Quatre informations suffisent. Aucun cahier des charges n'est
+          nécessaire.</p>
       </div>
       <div class="offres">
         <div class="offre">
           <h3>Votre métier</h3>
-          <div class="offre__corps"><p>Et ce qui vous distingue des autres, même si ça vous paraît évident.</p></div>
+          <div class="offre__corps"><p>Votre activité et ce qui vous distingue de vos concurrents</p></div>
         </div>
         <div class="offre">
           <h3>Votre ville</h3>
-          <div class="offre__corps"><p>La commune exacte, pas le département. C'est ce qui fait tout le référencement local.</p></div>
+          <div class="offre__corps"><p>La commune exacte plutôt que le département. C'est la base du référencement local.</p></div>
         </div>
         <div class="offre">
           <h3>Votre site actuel</h3>
-          <div class="offre__corps"><p>S'il en existe un, même raté, même abandonné.</p></div>
+          <div class="offre__corps"><p>S'il en existe un, même ancien ou inactif</p></div>
         </div>
         <div class="offre">
           <h3>Votre échéance</h3>
-          <div class="offre__corps"><p>Une ouverture, une saison, un salon. Ça change l'ordre du travail.</p></div>
+          <div class="offre__corps"><p>Une ouverture, une saison ou un salon. Cela nous aide à planifier le travail.</p></div>
         </div>
       </div>
     </div>
@@ -599,10 +600,10 @@ ENGAGEMENT = """
       </div>
 
       <div class="prose" style="margin-top:clamp(2.5rem,6vw,4rem)">
-        <p class="fort">En tant qu'agence digitale, nous nous engageons pour
-          réduire l'empreinte environnementale de nos productions via une
-          méthodologie d'éco-conception basée sur la mesure, la modélisation
-          et la diminution de l'impact des sites internet.</p>
+        <p class="fort">En tant qu'agence digitale, nous nous engageons à
+          réduire l'empreinte environnementale de nos productions. Notre
+          méthode d'éco-conception repose sur la mesure, la modélisation et la
+          diminution de l'impact des sites internet.</p>
       </div>
     </div>
   </section>
@@ -611,8 +612,8 @@ ENGAGEMENT = """
     <div class="enveloppe">
       <div class="chapeau">
         <h2>Ce que ça donne en chiffres</h2>
-        <p>Un engagement sans mesure ne vaut rien. Voici ce qui a été relevé
-          sur les sites déjà livrés.</p>
+        <p>Un engagement doit se mesurer. Voici les résultats relevés sur les
+          sites déjà livrés.</p>
       </div>
 
       <div class="offres">
@@ -662,9 +663,9 @@ ENGAGEMENT = """
   <section class="section">
     <div class="enveloppe">
       <div class="appel">
-        <h2>Un site léger, ça se voit</h2>
-        <p>Vos visiteurs le ressentent avant de comprendre pourquoi, et
-          Google le mesure pour de bon.</p>
+        <h2>Un site léger fait la différence</h2>
+        <p>Vos visiteurs le ressentent immédiatement et Google en tient compte
+          dans son classement.</p>
         <a class="bouton" href="mailto:contact@soteros.fr?subject=Demande%20de%20devis">Demander un devis</a>
         <p style="margin-top:1.6rem"><a class="lien" href="contact.html">Contact</a></p>
       </div>
@@ -727,23 +728,23 @@ OFFRES = f"""
       <div class="chapeau">
         <p class="repere">Offres</p>
         <h1 class="leve"><span>Deux formules</span></h1>
-        <p>Un site complet pour commencer. Un entretien si vous voulez que je
-          m'occupe de la suite.</p>
+        <p>Un site complet pour démarrer. Un entretien mensuel pour le faire
+          évoluer.</p>
       </div>
 
       <div class="offres">
         <div class="offre">
           <h3>Création de site</h3>
           <div class="offre__corps">
-            <p>Un site sur mesure, mis en ligne. <strong>Votre fiche Google, sa
-              page d'avis et le QR code sont offerts.</strong> Le prix
-              dépend du nombre de pages, et vous recevez un devis écrit avant
-              de vous engager.</p>
+            <p>Un site sur mesure livré en ligne. <strong>La fiche Google, sa
+              page d'avis et le QR code sont offerts.</strong> Le prix dépend
+              du nombre de pages. Vous recevez un devis écrit avant tout
+              engagement.</p>
             <ul class="livre">
-              <li>Site sur mesure, pensé pour le téléphone</li>
-              <li>Hébergement compris</li>
-              <li>Fiche Google avec avis, offerte</li>
-              <li>QR code vers la page d'avis, offert</li>
+              <li>Site sur mesure conçu pour le mobile</li>
+              <li>Hébergement inclus</li>
+              <li>Fiche Google avec avis offerte</li>
+              <li>QR code vers la page d'avis offert</li>
               <li>Les fichiers vous appartiennent</li>
             </ul>
             {DEVIS}
@@ -753,9 +754,9 @@ OFFRES = f"""
         <div class="offre">
           <h3>Entretien</h3>
           <div class="offre__corps">
-            <p>Un abonnement mensuel. Vous m'envoyez vos nouvelles photos ou
-              vos nouveaux tarifs, je mets à jour. <strong>Sans engagement de
-              durée.</strong></p>
+            <p>Un abonnement mensuel. Vous nous envoyez vos nouvelles photos ou
+              vos nouveaux tarifs et nous mettons le site à jour.
+              <strong>Sans engagement de durée.</strong></p>
             <ul class="livre">
               <li>Mises à jour de contenu</li>
               <li>Petites modifications</li>
@@ -775,24 +776,24 @@ OFFRES = f"""
       </div>
       <div class="offres">
         <div class="offre">
-          <h3>Combien de temps ça prend&nbsp;?</h3>
-          <div class="offre__corps"><p>Environ trois semaines, du premier appel à la mise en ligne.</p></div>
+          <h3>Quel est le délai de réalisation&nbsp;?</h3>
+          <div class="offre__corps"><p>Environ trois semaines du premier échange à la mise en ligne</p></div>
         </div>
         <div class="offre">
           <h3>À quoi sert le QR code&nbsp;?</h3>
-          <div class="offre__corps"><p>Vous le posez sur votre comptoir, votre carte de visite ou vos factures. Vos clients le scannent et arrivent directement sur la page pour laisser un avis.</p></div>
+          <div class="offre__corps"><p>Il se place sur votre comptoir, votre carte de visite ou vos factures. Vos clients le scannent et arrivent directement sur la page pour laisser un avis.</p></div>
         </div>
         <div class="offre">
           <h3>L'entretien est-il obligatoire&nbsp;?</h3>
-          <div class="offre__corps"><p>Non. Le site vous appartient. Vous pouvez prendre l'entretien, l'arrêter ou le reprendre quand vous voulez.</p></div>
+          <div class="offre__corps"><p>Non. Le site vous appartient. Vous pouvez souscrire à l'entretien, l'arrêter ou le reprendre à tout moment.</p></div>
         </div>
         <div class="offre">
-          <h3>Comment avoir un prix&nbsp;?</h3>
-          <div class="offre__corps"><p>Écrivez-moi votre métier et ce que vous voulez sur le site. Je vous envoie un devis écrit, sans engagement.</p></div>
+          <h3>Comment obtenir un devis&nbsp;?</h3>
+          <div class="offre__corps"><p>Indiquez-nous votre métier et le contenu souhaité. Nous vous envoyons un devis écrit et sans engagement.</p></div>
         </div>
         <div class="offre">
-          <h3>Comment vous joindre&nbsp;?</h3>
-          <div class="offre__corps"><p>Par e-mail à <a href="mailto:contact@soteros.fr">contact@soteros.fr</a>. Je réponds en général dans la journée.</p></div>
+          <h3>Comment nous joindre&nbsp;?</h3>
+          <div class="offre__corps"><p>Par e-mail à <a href="mailto:contact@soteros.fr">contact@soteros.fr</a>. Nous répondons en général dans la journée.</p></div>
         </div>
       </div>
     </div>
@@ -801,9 +802,9 @@ OFFRES = f"""
   <section class="section">
     <div class="enveloppe">
       <div class="appel">
-        <h2>On en parle&nbsp;?</h2>
-        <p>Dites-moi votre métier et votre ville. Je reviens vers vous avec un
-          devis clair.</p>
+        <h2>Discutons de votre projet</h2>
+        <p>Présentez-nous votre métier et votre ville. Nous revenons vers vous
+          avec un devis clair.</p>
         <a class="bouton" href="mailto:contact@soteros.fr?subject=Demande%20de%20devis">Demander un devis</a>
         <p style="margin-top:1.6rem"><a class="lien" href="contact.html">Contact</a></p>
       </div>
@@ -829,8 +830,8 @@ PAGES = [
      "en Île-de-France.",
      PROJETS),
     ("agence.html", "L'agence — Soteros",
-     "Un développeur, des sites écrits à la main, des clients indépendants. "
-     "Ce que Soteros fait et comment.",
+     "Un interlocuteur unique et des sites développés à la main pour les "
+     "indépendants et les petites entreprises.",
      AGENCE),
     ("engagement.html", "Engagement — Soteros",
      "Éco-conception des sites internet. Mesurer, modéliser et diminuer "
